@@ -55,10 +55,10 @@ sudo apt-get install gstreamer1.0* gstreamer
 Follow the steps :
 
 https://github.com/detrout/qt-gstreamer
-'''
+```
 bind to /lib64
 $ cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local
-'''
+```
 ### Section 2.3 qt-gstreamer
 
 ```
