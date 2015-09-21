@@ -1,8 +1,8 @@
 
 
-#Raspberry pi / Desktop - gstreamer packages
+# client/server - gstreamer packages
 
-These steps must be followed for the Raspberry AND the Desktop.
+These steps must be followed for client side and server side.
 
 ##Fedora
 
@@ -52,7 +52,7 @@ sudo apt-get install gstreamer1.0* gstreamer
 ```
 #qt-gstreamer
 
-Follow the steps :
+These steps must be followed for the client side
 
 https://github.com/detrout/qt-gstreamer
 ### Section 2.3 qt-gstreamer
@@ -67,29 +67,9 @@ $ mkdir build && cd build
 $ cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local
 $ make
 $ make install
+
+
 ```
-###Examples - VoIP
-If you have trouble to compile with Qt add this lines in  voip.pro
-
-be careful for lgstqt5videosink check the path or move it in $QT_GSTREAMER/bin/lib64
-
-see below
-```
-QT_GSTREAMER=[YOUR_GSTREAMER_PATH]
-
-CONFIG += $QT_GSTREAMER/bin/lib64/pckconfig
-
-LIBS+= -L$QT_GSTREAMER/bin/lib64\
-                                -lQt5GStreamerQuick-1.0\
-                                -lQt5GLib-2.0\
-                                -lQt5GStreamerUi-1.0\
-                                -lQt5GStreamerUtils-1.0\
-                                -lQt5GStreamer-1.0
-
-
-LIBS+=- L$QT_GSTREAMER/bin/lib64_2\
-                                -lgstqt5videosink
-
-INCLUDEPATH+="$QT_GSTREAMER/bin/include/Qt5GStreamer/"
+Demo :
 
 ```
